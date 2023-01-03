@@ -1,0 +1,112 @@
+@font-face {
+	
+    font-family: 'Moon Dance', cursive;
+	src: url('https://fonts.googleapis.com/css2?family=Andika:ital@0;1&family=Inconsolata:wght@200&family=Moon+Dance&display=swap');
+	font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --mediumseagreen: #3cb371;
+    --slategray: #708090;
+    --honeydew: #f0fff0;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Moon Dance', cursive;
+    min-width: 320px;
+}
+
+body{
+    padding: 15px;
+	background-color: mintcream;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.title{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--slategray);
+    border: 5px solid var(--slategray);
+    height: 50px;
+    font-size: 1.5rem;
+	border-radius: 10px 10px 10px 10px
+}
+
+main{
+    display: flex;
+    flex-flow: row nowrap;
+    height: calc(100% - 60px);
+    margin-top: 10px;
+}
+
+.sidebar{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 200px;;
+    flex-shrink: 0;
+    border: 10px solid black;
+	border-color : darkseagreen;
+    padding: 20px;
+	border-radius: 10px 10px 10px 10px
+}
+
+.sidebar > span{
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1;
+    border: 5px solid mediumseagreen;
+    margin-left: 10px;
+    align-content: flex-start;
+    overflow-y: scroll;
+	border-radius: 10px 10px 10px 10px
+}
+
+.card{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 200px;
+    min-height: 150px;
+    padding: 10px;
+    background-color: var(--honeydew);
+    margin: 20px;
+    border-radius: 10px;
+	justify-content: center;
+}
+
+.card > img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.card > span{
+    text-align: center;
+    word-break: break-all;
+}
+
+@media (max-width: 1000px){
+    .card{
+        background: var(--slategray);
+    }
+}
+
+@media (max-width: 700px){
+    .card{
+        background: var(--slategray);
+    }
+}
